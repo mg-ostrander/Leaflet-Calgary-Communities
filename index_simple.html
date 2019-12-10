@@ -42,7 +42,7 @@
 
 	$.ajax({
 	    type: "POST",
-	    url: '/Leaflet-Testing/Census_by_Community_2018.geojson',
+	    url: './Census_by_Community_2018.geojson',
 	    dataType: 'json',
 	    success: function (response) {
 		geojsonLayer = L.geoJson(response).addTo(mymap);
