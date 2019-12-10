@@ -37,9 +37,15 @@
 		id: 'mapbox.streets'
 	}).addTo(mymap);
 	
+
 	
+	// loading GeoJSON file - Here my html and usa_adm.geojson file resides in same folder
+	$.getJSON("Census_by_Community_2018.geojson",function(data){
+		// L.geoJson function is used to parse geojson file and load on to map
+		L.geoJson(data).addTo(mymap);
+	});	
 
-
+/*
 	$.ajax({
 	    type: "POST",
 	    url: './Census_by_Community_2018.geojson',
@@ -49,6 +55,7 @@
 	    }
 	});
 	
+*/	
 </script>
 
 
