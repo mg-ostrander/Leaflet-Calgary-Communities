@@ -36,7 +36,14 @@
 	}).addTo(mymap);
 	
 	
-	L.geoJSON("https://github.com/mg-ostrander/Leaflet-Testing/blob/master/Census_by_Community_2018.geojson").addTo(map);
+	$.ajax({
+	    type: "POST",
+	    url: 'https://github.com/mg-ostrander/Leaflet-Testing/blob/master/Census_by_Community_2018.geojson',
+	    dataType: 'json',
+	    success: function (response) {
+		geojsonLayer = L.geoJson(response).addTo(map);
+	    }
+	});
 	
 
 </script>
