@@ -8,6 +8,8 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
+	<link rel="stylesheet" href="style.css"/>
+	
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
@@ -19,8 +21,12 @@
 <body>
 
 
+<div id="mapid"></div>
 
+<!-- OLD - Embedded style 
 <div id="mapid" style="width: 600px; height: 400px;"></div>
+-->
+
 <script>
 
 	var mymap = L.map('mapid').setView([51.025, -114.07], 11);
