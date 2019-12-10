@@ -38,14 +38,16 @@
 	}).addTo(mymap);
 	
 
-/*	
+	
 	// loading GeoJSON file - https://www.igismap.com/add-load-geojson-file-point-polyline-polygon-map-leaflet-js/
 	$.getJSON("Census_by_Community_2018.geojson",function(data){
 		// L.geoJson function is used to parse geojson file and load on to map
 		L.geoJson(data).addTo(mymap);
 	});	
 
-*/
+	
+/* --- NOT WORKING ---
+
 	$.ajax({
 	    type: "POST",
 	    url: 'Census_by_Community_2018.geojson',
@@ -54,7 +56,7 @@
 		geojsonLayer = L.geoJson(response).addTo(mymap);
 	    }
 	});
-	
+*/	
 	
 </script>
 
