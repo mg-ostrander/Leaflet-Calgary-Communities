@@ -18,9 +18,6 @@
 	
 	<!-- Add jQuery--> 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	
-	<!-- Leaflet AJAX plugin by Calvin Metcalf -->
-	<script src="https://raw.github.com/calvinmetcalf/leaflet-ajax/master/dist/leaflet.ajax.min.js"></script>
 
 	
 </head>
@@ -41,23 +38,17 @@
 	}).addTo(mymap);
 	
 	
-	
-	var geojsonLayer = new L.GeoJSON.AJAX("./Census_by_Community_2018.json");
-	var geojsonLayer = new L.GeoJSON.AJAX("https://github.com/mg-ostrander/Leaflet-Testing/blob/master/Census_by_Community_2018.jsonp", {dataType:"jsonp"});
-	
-	geojsonLayer.addTo(mymap);
-	/*
-	
+
+
 	$.ajax({
 	    type: "POST",
-	    url: 'https://github.com/mg-ostrander/Leaflet-Testing/blob/master/Census_by_Community_2018.geojson',
+	    url: '/Census_by_Community_2018.geojson',
 	    dataType: 'json',
 	    success: function (response) {
 		geojsonLayer = L.geoJson(response).addTo(map);
 	    }
 	});
 	
-*/
 </script>
 
 
