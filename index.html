@@ -48,14 +48,28 @@
 	});	
 
 	
-	// Style polygons with orange border and light orange fill
+    // Define colours based on data ranges (create choropleth map)
+    function colourBreaks(d) {
+        return d == 0 ? '#d9d9d9' :
+                d < 26000 ? '#980043' :
+                d < 15000 ? '#dd1c77' :
+                d < 10000 ? '#df65b0' :
+                d < 7000 ? '#c994c7' :
+                d < 5000 ? '#d4b9da' :
+                d < 2500 ? '#f1eef6';         
+        
+    }
+    
+    	
+	// Style polygons with white border and fill based on the RES_CNT data breaks (defined in colourBreaks())
 	function polyStyle(feature) {
 		return {
 			weight: 1,
-			fillColor: '#FEB117',
-			color: '#FE8001'
+			fillColor: colourBreaks(feature.properties.RES_CNT),
+			color: '#FFFFFF'
 		};
 	}
+	
 	
 </script>
 
