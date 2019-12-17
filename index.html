@@ -50,13 +50,13 @@
 	
     // Define colours based on data ranges (create choropleth map)
     function colourBreaks(d) {
-        return d == 0 ? '#d9d9d9' :
-                d < 26000 ? '#980043' :
-                d < 15000 ? '#dd1c77' :
-                d < 10000 ? '#df65b0' :
-                d < 7000 ? '#c994c7' :
-                d < 5000 ? '#d4b9da' :
-                d < 2500 ? '#f1eef6';         
+        return d > 15000 ? '#980043' :
+                d > 10000 ? '#dd1c77' :
+                d > 7000 ? '#df65b0' :
+                d > 5000 ? '#c994c7' :
+                d > 2500 ? '#d4b9da' :
+                d > 1 ? '#f1eef6' :
+                        '#d9d9d9';           
         
     }
     
